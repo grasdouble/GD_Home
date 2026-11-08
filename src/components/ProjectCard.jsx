@@ -1,0 +1,36 @@
+import { ArrowUpRight, Github } from 'lucide-react';
+import styles from './ProjectCard.module.css';
+
+export default function ProjectCard({ project, index, locale, text }) {
+  return (
+    <article className={styles.card}>
+      <div className={`${styles.visual} ${styles[`visual${index % 4}`]}`}>
+        <span className={styles.visualIndex}>{String(index + 1).padStart(2, '0')}</span>
+        <span className={styles.monogram}>{project.name.replace(/[^a-z0-9]/gi, '').slice(0, 2).toUpperCase()}</span>
+        <img
+          className={styles.image}
+          src={`${import.meta.env.BASE_URL}images/projects/${project.id}.webp`}
+          alt={`${locale === 'fr' ? 'Aperçu de' : 'Preview of'} ${project.name}`}
+          onError={(event) => event.currentTarget.classList.add(styles.imageMissing)}
+        />
+        <span className={styles.visualCaption}>{project.language || text.web}</span>
+        <span className={`${styles.shape} ${styles.shapeOne}`} />
+        <span className={`${styles.shape} ${styles.shapeTwo}`} />
+      </div>
+      <div className={styles.meta}>
+        <span>{project.language || text.project}</span>
+        <span><span className={styles.statusDot} /> {project.siteUrl ? text.online : text.github}</span>
+      </div>
+      <h3 className={styles.title}>{project.name}</h3>
+      <p className={styles.description}>{project.description || text.orgProject}</p>
+      <div className={styles.footer}>
+        <a href={project.siteUrl || project.repositoryUrl} target="_blank" rel="noreferrer">
+          {project.siteUrl ? text.visit : text.view} <ArrowUpRight size={15} />
+        </a>
+        <span className={styles.repoActions}>
+          <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`GitHub ${project.name}`}><Github size={16} /></a>
+        </span>
+      </div>
+    </article>
+  );
+}

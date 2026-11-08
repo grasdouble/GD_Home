@@ -1,0 +1,53 @@
+.projects { padding: 74px 0 58px; }
+.heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 29px; }
+.heading h2 { margin: 13px 0 0; font: 600 39px/1.1 Manrope, sans-serif; letter-spacing: -1.5px; }
+.heading h2 span { color: var(--accent); }
+.count { padding-bottom: 5px; color: #8d9db2; font: 11px 'DM Mono', monospace; }
+.count > span { margin-right: 6px; color: #e8eef8; font-size: 19px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.filters { display: flex; flex-wrap: wrap; gap: 7px; }
+.filterChip {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: transparent;
+  color: #9eacc0;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .2s;
+}
+.filterChip:hover { border-color: #416b92; color: #e8eef8; }
+.selected { background: #164d79; color: #e9f6ff; box-shadow: inset 0 0 0 1px #327fb3; }
+.searchBox {
+  display: flex;
+  width: 232px;
+  height: 37px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px;
+  border: 1px solid #2c4058;
+  border-radius: 4px;
+  background: #0d192a;
+  color: #8ea4bd;
+  box-shadow: inset 0 1px 2px #030a13;
+}
+.searchBox:focus-within { border-color: #3786ba; box-shadow: 0 0 0 3px #2588c522; }
+.searchBox input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: #e8eef8; font-size: 11px; }
+.searchBox input::placeholder, .searchBox kbd { color: #74869d; }
+.searchBox kbd { white-space: nowrap; font: 9px 'DM Mono', monospace; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 20px; }
+.emptyState { display: flex; min-height: 180px; align-items: center; justify-content: center; color: #a3b2c6; font-size: 13px; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .projects { padding-top: 52px; }
+  .heading h2 { font-size: 34px; }
+  .count { font-size: 9px; }
+  .toolbar { align-items: flex-start; flex-direction: column; }
+  .filters { gap: 2px; }
+  .filterChip { padding: 7px 9px; font-size: 10px; }
+  .searchBox { width: 100%; }
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+}
