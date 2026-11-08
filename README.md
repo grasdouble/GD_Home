@@ -12,7 +12,7 @@ pnpm install
 pnpm dev
 ```
 
-Run `pnpm test` to execute the project-filter tests. `.github/workflows/ci.yml` runs the same tests and production build on pushes and pull requests, and validates workflow files with the shared `Lufa-CICD` actions.
+Run `pnpm test` to execute the project-filter tests. `.github/workflows/ci.yml` runs tests and a production build on pull requests and pushes to `main`; it validates workflow files with the shared `Lufa-CICD` actions.
 
 ## GitHub Pages deployment
 
