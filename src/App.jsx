@@ -25,8 +25,10 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = locale;
+    document.title = text.metaTitle;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', text.metaDescription);
     try { localStorage.setItem('grasdouble-locale', locale); } catch {}
-  }, [locale]);
+  }, [locale, text]);
 
   return (
     <main className={styles.pageShell}>

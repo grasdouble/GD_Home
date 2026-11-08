@@ -1,5 +1,7 @@
 const translations = {
   fr: {
+    metaTitle: 'Grasdouble — Sites & projets',
+    metaDescription: "Explorez les sites et projets web de l'organisation GitHub grasdouble.",
     organization: 'Organisation GitHub',
     headline: <>Des idées qui<br /><span>prennent vie.</span></>,
     intro: <>Les sites, expériences et projets web imaginés par <strong>Grasdouble</strong>. Un petit aperçu de ce que nous construisons.</>,
@@ -16,6 +18,8 @@ const translations = {
     langLabel: 'Langue',
   },
   en: {
+    metaTitle: 'Grasdouble — Websites & projects',
+    metaDescription: 'Explore the websites and web projects of the Grasdouble GitHub organization.',
     organization: 'GitHub organization',
     headline: <>Ideas that<br /><span>come to life.</span></>,
     intro: <>Websites, experiences, and projects imagined by <strong>Grasdouble</strong>. A glimpse of what we build.</>,
