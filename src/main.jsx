@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import projects from './projects.json';
+import { filterProjects } from './project-filter.js';
 import { ArrowDown, ArrowRight, ArrowUpRight, Github, Search, Sparkles } from 'lucide-react';
 import './style.css';
 
@@ -12,9 +13,7 @@ function App() {
   const [activeFilter, setActiveFilter] = useState('Tous');
 
   const categories = useMemo(() => ['Tous', ...new Set(repos.map((repo) => repo.language).filter(Boolean))], [repos]);
-  const filteredRepos = repos
-    .filter((repo) => activeFilter === 'Tous' || repo.language === activeFilter)
-    .filter((repo) => `${repo.name} ${repo.description || ''} ${repo.language || ''}`.toLowerCase().includes(query.toLowerCase().trim()));
+  const filteredRepos = useMemo(() => filterProjects(repos, { language: activeFilter, query }), [repos, activeFilter, query]);
 
   return (
     <main className="page-shell">
