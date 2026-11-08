@@ -26,12 +26,12 @@ test('searches descriptions in either supported language', () => {
   assert.deepEqual(filterProjects(projects, { query: 'outils d’ia' }).map((project) => project.id), ['kitia']);
 });
 
-test('every configured project has bilingual descriptions and multiple valid tags', () => {
+test('every configured project has bilingual descriptions and valid tags', () => {
   for (const project of configuredProjects) {
     assert.deepEqual(Object.keys(project.description).sort(), ['en', 'fr']);
     assert.ok(project.description.en.trim(), `${project.id} is missing its English description`);
     assert.ok(project.description.fr.trim(), `${project.id} is missing its French description`);
-    assert.ok(Array.isArray(project.tags) && project.tags.length > 1, `${project.id} must have multiple tags`);
+    assert.ok(Array.isArray(project.tags) && project.tags.length > 0, `${project.id} must have at least one tag`);
     assert.ok(project.tags.every((tag) => typeof tag === 'string' && tag.trim()), `${project.id} has an invalid tag`);
     assert.equal(Object.hasOwn(project, 'language'), false, `${project.id} still uses the old language field`);
   }

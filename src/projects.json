@@ -67,7 +67,7 @@
       "en": "A collection of resources and guidance for authoring reusable AI agents, skills, and instructions.",
       "fr": "Collection de ressources et de guides pour créer des agents, skills et instructions réutilisables pour l’IA."
     },
-    "tags": ["AI", "Agents", "Skills", "Instructions"],
+    "tags": ["AI"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
   }
