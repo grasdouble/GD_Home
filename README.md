@@ -14,6 +14,13 @@ pnpm dev
 
 Build for production with `pnpm build`; serve the generated `dist/` directory with a static host.
 
+## GitHub Pages deployment
+
+`.github/workflows/deploy.yml` builds the site with the pinned Node.js and pnpm versions, then deploys it to GitHub Pages when the default branch is updated. It can also be started manually from the Actions tab on the default branch.
+
+In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions** and configure the custom domain under **Pages → Custom domain**. Point the domain's DNS records to GitHub Pages as instructed by GitHub. Vite uses its default root base path, so assets work at the custom domain root.
+
+
 ## Data and site links
 
 The displayed projects are maintained in `src/projects.json`; the application does not query GitHub at runtime. Each entry contains a string `id` (the project/repository name), a display `name`, optional `description` and `language`, a `siteUrl`, and a `repositoryUrl`. The array order is the display order. Search and language filtering are derived from this file.
