@@ -26,7 +26,7 @@ test('searches descriptions in either supported language', () => {
   assert.deepEqual(filterProjects(projects, { query: 'outils d’ia' }).map((project) => project.id), ['kitia']);
 });
 
-test('every configured project has a non-empty description in both supported languages', () => {
+test('every configured project has bilingual descriptions and multiple valid tags', () => {
   for (const project of configuredProjects) {
     assert.deepEqual(Object.keys(project.description).sort(), ['en', 'fr']);
     assert.ok(project.description.en.trim(), `${project.id} is missing its English description`);
