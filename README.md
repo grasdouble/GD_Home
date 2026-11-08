@@ -12,11 +12,11 @@ pnpm install
 pnpm dev
 ```
 
-Run `pnpm test` to execute the project-filter tests. The GitHub Actions workflow runs the same tests and production build on pushes and pull requests; it validates workflow files with the shared `Lufa-CICD` actions.
+Run `pnpm test` to execute the project-filter tests. `.github/workflows/ci.yml` runs the same tests and production build on pushes and pull requests, and validates workflow files with the shared `Lufa-CICD` actions.
 
 ## GitHub Pages deployment
 
-`.github/workflows/ci.yml` runs workflow validation, tests, and a production build on pushes and pull requests. A passing run on the default branch deploys the Pages artifact; the workflow can also be started manually from the Actions tab.
+`.github/workflows/deploy.yml` is separate from CI. It runs only after a successful push-triggered CI run on the default branch, then rebuilds that exact tested revision and deploys it to GitHub Pages.
 
 In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions** and configure the custom domain under **Pages → Custom domain**. Point the domain's DNS records to GitHub Pages as instructed by GitHub. Vite uses its default root base path, so assets work at the custom domain root.
 
