@@ -1,0 +1,36 @@
+const translations = {
+  fr: {
+    organization: 'Organisation GitHub',
+    headline: <>Des idées qui<br /><span>prennent vie.</span></>,
+    intro: <>Les sites, expériences et projets web imaginés par <strong>Grasdouble</strong>. Un petit aperçu de ce que nous construisons.</>,
+    explore: 'Explorer les projets',
+    discover: 'À découvrir',
+    visible: 'projets visibles',
+    filter: 'Filtrer par tag',
+    search: 'Rechercher un projet',
+    empty: 'Aucun projet ne correspond à cette recherche.',
+    online: 'EN LIGNE',
+    github: 'SUR GITHUB',
+    visit: 'Visiter le site',
+    view: 'Voir le projet',
+    langLabel: 'Langue',
+  },
+  en: {
+    organization: 'GitHub organization',
+    headline: <>Ideas that<br /><span>come to life.</span></>,
+    intro: <>Websites, experiences, and projects imagined by <strong>Grasdouble</strong>. A glimpse of what we build.</>,
+    explore: 'Explore projects',
+    discover: 'Discover',
+    visible: 'projects shown',
+    filter: 'Filter by tag',
+    search: 'Search projects',
+    empty: 'No projects match your search.',
+    online: 'LIVE',
+    github: 'ON GITHUB',
+    visit: 'Visit website',
+    view: 'View project',
+    langLabel: 'Language',
+  },
+};
+
+export default translations;

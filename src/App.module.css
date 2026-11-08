@@ -1,0 +1,13 @@
+.pageShell {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+@media (max-width: 900px) {
+  .pageShell { padding: 0 40px; }
+}
+
+@media (max-width: 600px) {
+  .pageShell { padding: 0 21px; }
+}

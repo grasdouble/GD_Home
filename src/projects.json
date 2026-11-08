@@ -1,50 +1,74 @@
 [
   {
     "id": "Kitia",
+    "placeholderImage": "placeholder-analytics.webp",
     "name": "Kitia",
-    "description": "Kitia — Organize and manage your AI tools",
-    "language": "TypeScript",
+    "description": {
+      "en": "A terminal UI for discovering and managing skills, agents, and instructions from GitHub repositories, then installing them for Claude Code and GitHub Copilot.",
+      "fr": "Interface en terminal pour découvrir et gérer des skills, agents et instructions issus de dépôts GitHub, puis les installer pour Claude Code et GitHub Copilot."
+    },
+    "tags": ["TUI", "CLI", "AI"],
     "siteUrl": "https://kitia.grasdouble.fr",
     "repositoryUrl": "https://github.com/grasdouble/Kitia"
   },
   {
     "id": "Lufa-CICD",
+    "placeholderImage": "placeholder-engineering.webp",
     "name": "Lufa CI/CD",
-    "description": "",
-    "language": "JavaScript",
+    "description": {
+      "en": "A shared GitHub Actions catalog for reusable CI/CD, release, and repository automation across Grasdouble projects.",
+      "fr": "Catalogue partagé d’actions GitHub réutilisables pour la CI/CD, les publications et l’automatisation des dépôts Grasdouble."
+    },
+    "tags": ["CI", "GitHub Actions", "Automation"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-CICD"
   },
   {
     "id": "Lufa-Core",
+    "placeholderImage": "placeholder-coding.webp",
     "name": "Lufa Core",
-    "description": "",
-    "language": "JavaScript",
+    "description": {
+      "en": "A pnpm monorepo for shared infrastructure, tooling, and CDN services across the Lufa ecosystem.",
+      "fr": "Monorepo pnpm regroupant l’infrastructure partagée, les outils et les services CDN de l’écosystème Lufa."
+    },
+    "tags": ["JavaScript", "Infrastructure", "CDN"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Core"
   },
   {
     "id": "Lufa-Design-System",
+    "placeholderImage": "placeholder-design.webp",
     "name": "Lufa Design System",
-    "description": "Design system Lufa, avec Storybook en ligne.",
-    "language": "TypeScript",
+    "description": {
+      "en": "Lufa design system with an online Storybook.",
+      "fr": "Système de design Lufa avec Storybook en ligne."
+    },
+    "tags": ["TypeScript", "Design System", "Storybook"],
     "siteUrl": "https://lufa-design.sebastien-lemouillour.fr",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Design-System"
   },
   {
     "id": "sebastien-lemouillour.fr",
+    "placeholderImage": "placeholder-launch.webp",
     "name": "sebastien-lemouillour.fr",
-    "description": "",
-    "language": "TypeScript",
+    "description": {
+      "en": "Source code for the personal website, built as a single-spa microfrontend application with React and TypeScript.",
+      "fr": "Code source du site personnel, construit comme une application à microfrontends avec single-spa, React et TypeScript."
+    },
+    "tags": ["TypeScript", "React", "single-spa"],
     "siteUrl": "https://sebastien-lemouillour.fr",
     "repositoryUrl": "https://github.com/grasdouble/sebastien-lemouillour.fr"
   },
   {
-    "id": "Jarvis",
-    "name": "Jarvis",
-    "description": "",
-    "language": "JavaScript",
+    "id": "AI-Kit",
+    "placeholderImage": "placeholder-experiment.webp",
+    "name": "AI-Kit",
+    "description": {
+      "en": "A collection of resources and guidance for authoring reusable AI agents, skills, and instructions.",
+      "fr": "Collection de ressources et de guides pour créer des agents, skills et instructions réutilisables pour l’IA."
+    },
+    "tags": ["AI"],
     "siteUrl": "",
-    "repositoryUrl": "https://github.com/grasdouble/Jarvis"
+    "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
   }
 ]
