@@ -8,13 +8,12 @@ it('renders the localized headline, intro, explore anchor, and illustration labe
       headline={<>Ideas that<br /><span>come to life.</span></>}
       intro={<>Web projects by <strong>Grasdouble</strong>.</>}
       explore="Explore projects"
-      made={<>MADE WITH<br />CURIOSITY</>}
-      illustrationLabel="Colorful abstract illustration"
+      illustrationLabel="GrasDouble panda at a computer"
     />,
   );
 
   expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Ideas thatcome to life.');
   expect(screen.getByText('Grasdouble')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /Explore projects/ })).toHaveAttribute('href', '#projets');
-  expect(screen.getByRole('img', { name: 'Colorful abstract illustration' })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: 'GrasDouble panda at a computer' })).toHaveAttribute('src', '/images/hero-panda.webp');
 });

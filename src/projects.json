@@ -1,22 +1,25 @@
 [
   {
     "id": "Kitia",
+    "placeholderImage": "placeholder-analytics.webp",
     "name": "Kitia",
     "description": "Kitia — Organize and manage your AI tools",
-    "language": "TypeScript",
+    "language": "TUI",
     "siteUrl": "https://kitia.grasdouble.fr",
     "repositoryUrl": "https://github.com/grasdouble/Kitia"
   },
   {
     "id": "Lufa-CICD",
+    "placeholderImage": "placeholder-engineering.webp",
     "name": "Lufa CI/CD",
     "description": "",
-    "language": "JavaScript",
+    "language": "CI",
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-CICD"
   },
   {
     "id": "Lufa-Core",
+    "placeholderImage": "placeholder-coding.webp",
     "name": "Lufa Core",
     "description": "",
     "language": "JavaScript",
@@ -25,6 +28,7 @@
   },
   {
     "id": "Lufa-Design-System",
+    "placeholderImage": "placeholder-design.webp",
     "name": "Lufa Design System",
     "description": "Design system Lufa, avec Storybook en ligne.",
     "language": "TypeScript",
@@ -33,6 +37,7 @@
   },
   {
     "id": "sebastien-lemouillour.fr",
+    "placeholderImage": "placeholder-launch.webp",
     "name": "sebastien-lemouillour.fr",
     "description": "",
     "language": "TypeScript",
@@ -40,11 +45,12 @@
     "repositoryUrl": "https://github.com/grasdouble/sebastien-lemouillour.fr"
   },
   {
-    "id": "Jarvis",
-    "name": "Jarvis",
+    "id": "AI-Kit",
+    "placeholderImage": "placeholder-experiment.webp",
+    "name": "AI-Kit",
     "description": "",
-    "language": "JavaScript",
+    "language": "AI",
     "siteUrl": "",
-    "repositoryUrl": "https://github.com/grasdouble/Jarvis"
+    "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
   }
 ]

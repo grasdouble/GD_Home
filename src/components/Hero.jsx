@@ -1,7 +1,7 @@
 import { ArrowDown } from 'lucide-react';
 import styles from './Hero.module.css';
 
-export default function Hero({ headline, intro, explore, made, illustrationLabel }) {
+export default function Hero({ headline, intro, explore, illustrationLabel }) {
   return (
     <section className={styles.hero} id="top">
       <div className={styles.copy}>
@@ -9,15 +9,8 @@ export default function Hero({ headline, intro, explore, made, illustrationLabel
         <p className={styles.intro}>{intro}</p>
         <a className={styles.exploreLink} href="#projets">{explore} <ArrowDown size={15} /></a>
       </div>
-      <div className={styles.art} aria-label={illustrationLabel} role="img">
-        <div className={`${styles.orbit} ${styles.orbitOne}`} />
-        <div className={`${styles.orbit} ${styles.orbitTwo}`} />
-        <div className={styles.sun} />
-        <div className={`${styles.artCard} ${styles.cardBack}`} />
-        <div className={`${styles.artCard} ${styles.cardFront}`}><span>G.</span><i /><i /><i /></div>
-        <div className={`${styles.spark} ${styles.sparkA}`}>✳</div>
-        <div className={`${styles.spark} ${styles.sparkB}`}>✳</div>
-        <div className={styles.artLabel}>{made}</div>
+      <div className={styles.art}>
+        <img className={styles.heroImage} src={`${import.meta.env.BASE_URL}images/hero-panda.webp`} alt={illustrationLabel} width="1240" height="620" fetchPriority="high" decoding="async" />
       </div>
     </section>
   );

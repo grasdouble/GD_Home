@@ -40,8 +40,7 @@ export default function App() {
         headline={text.headline}
         intro={text.intro}
         explore={text.explore}
-        made={text.made}
-        illustrationLabel={locale === 'fr' ? 'Illustration abstraite colorée' : 'Colorful abstract illustration'}
+        illustrationLabel={locale === 'fr' ? 'Panda GrasDouble devant un ordinateur' : 'GrasDouble panda at a computer'}
       />
       <Projects
         repos={projects}

@@ -2,6 +2,15 @@ import { ArrowUpRight, Github } from 'lucide-react';
 import styles from './ProjectCard.module.css';
 
 export default function ProjectCard({ project, index, locale, text }) {
+  function handleImageError(event) {
+    const image = event.currentTarget;
+    if (project.placeholderImage && image.dataset.placeholder !== 'true') {
+      image.dataset.placeholder = 'true';
+      image.src = `${import.meta.env.BASE_URL}images/project-placeholders/${project.placeholderImage}`;
+      return;
+    }
+    image.classList.add(styles.imageMissing);
+  }
   return (
     <article className={styles.card}>
       <div className={`${styles.visual} ${styles[`visual${index % 4}`]}`}>
@@ -11,7 +20,9 @@ export default function ProjectCard({ project, index, locale, text }) {
           className={styles.image}
           src={`${import.meta.env.BASE_URL}images/projects/${project.id}.webp`}
           alt={`${locale === 'fr' ? 'Aperçu de' : 'Preview of'} ${project.name}`}
-          onError={(event) => event.currentTarget.classList.add(styles.imageMissing)}
+          loading="lazy"
+          decoding="async"
+          onError={handleImageError}
         />
         <span className={styles.visualCaption}>{project.language || text.web}</span>
         <span className={`${styles.shape} ${styles.shapeOne}`} />
