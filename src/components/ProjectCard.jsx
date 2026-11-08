@@ -24,12 +24,14 @@ export default function ProjectCard({ project, index, locale, text }) {
           decoding="async"
           onError={handleImageError}
         />
-        <span className={styles.visualCaption}>{project.language || text.web}</span>
+        <span className={styles.visualCaption}>{project.tags[0]}</span>
         <span className={`${styles.shape} ${styles.shapeOne}`} />
         <span className={`${styles.shape} ${styles.shapeTwo}`} />
       </div>
       <div className={styles.meta}>
-        <span>{project.language || text.project}</span>
+        <div className={styles.metaTags}>
+          {project.tags.map((tag) => <span key={tag} className={styles.metaTag}>{tag}</span>)}
+        </div>
         <span><span className={styles.statusDot} /> {project.siteUrl ? text.online : text.github}</span>
       </div>
       <h3 className={styles.title}>{project.name}</h3>

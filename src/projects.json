@@ -7,7 +7,7 @@
       "en": "A terminal UI for discovering and managing skills, agents, and instructions from GitHub repositories, then installing them for Claude Code and GitHub Copilot.",
       "fr": "Interface en terminal pour découvrir et gérer des skills, agents et instructions issus de dépôts GitHub, puis les installer pour Claude Code et GitHub Copilot."
     },
-    "language": "TUI",
+    "tags": ["TUI", "CLI", "AI"],
     "siteUrl": "https://kitia.grasdouble.fr",
     "repositoryUrl": "https://github.com/grasdouble/Kitia"
   },
@@ -19,7 +19,7 @@
       "en": "A shared GitHub Actions catalog for reusable CI/CD, release, and repository automation across Grasdouble projects.",
       "fr": "Catalogue partagé d’actions GitHub réutilisables pour la CI/CD, les publications et l’automatisation des dépôts Grasdouble."
     },
-    "language": "CI",
+    "tags": ["CI", "GitHub Actions", "Automation"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-CICD"
   },
@@ -31,7 +31,7 @@
       "en": "A pnpm monorepo for shared infrastructure, tooling, and CDN services across the Lufa ecosystem.",
       "fr": "Monorepo pnpm regroupant l’infrastructure partagée, les outils et les services CDN de l’écosystème Lufa."
     },
-    "language": "JavaScript",
+    "tags": ["JavaScript", "Infrastructure", "CDN"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Core"
   },
@@ -43,7 +43,7 @@
       "en": "Lufa design system with an online Storybook.",
       "fr": "Système de design Lufa avec Storybook en ligne."
     },
-    "language": "TypeScript",
+    "tags": ["TypeScript", "Design System", "Storybook"],
     "siteUrl": "https://lufa-design.sebastien-lemouillour.fr",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Design-System"
   },
@@ -55,7 +55,7 @@
       "en": "Source code for the personal website, built as a single-spa microfrontend application with React and TypeScript.",
       "fr": "Code source du site personnel, construit comme une application à microfrontends avec single-spa, React et TypeScript."
     },
-    "language": "TypeScript",
+    "tags": ["TypeScript", "React", "single-spa"],
     "siteUrl": "https://sebastien-lemouillour.fr",
     "repositoryUrl": "https://github.com/grasdouble/sebastien-lemouillour.fr"
   },
@@ -67,7 +67,7 @@
       "en": "A collection of resources and guidance for authoring reusable AI agents, skills, and instructions.",
       "fr": "Collection de ressources et de guides pour créer des agents, skills et instructions réutilisables pour l’IA."
     },
-    "language": "AI",
+    "tags": ["AI"],
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
   }

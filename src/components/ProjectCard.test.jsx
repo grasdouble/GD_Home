@@ -3,14 +3,14 @@ import { expect, it } from 'vitest';
 import ProjectCard from './ProjectCard.jsx';
 
 const text = {
-  web: 'WEB PROJECT', project: 'Project', online: 'LIVE', github: 'ON GITHUB',
+  online: 'LIVE', github: 'ON GITHUB',
   visit: 'Visit website', view: 'View project',
 };
 
-it('renders the English project description and website destination', () => {
+it('renders a live project with its tags and website destination', () => {
   render(
     <ProjectCard
-      project={{ id: 'kitia', name: 'Kitia', description: { en: 'AI tools', fr: 'Outils d’IA' }, language: 'TypeScript', siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia', placeholderImage: 'placeholder-analytics.webp' }}
+      project={{ id: 'kitia', name: 'Kitia', description: { en: 'AI tools', fr: 'Outils d’IA' }, tags: ['TUI', 'CLI', 'AI'], siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia', placeholderImage: 'placeholder-analytics.webp' }}
       index={0}
       locale="en"
       text={text}
@@ -20,6 +20,9 @@ it('renders the English project description and website destination', () => {
   expect(screen.getByRole('heading', { name: 'Kitia' })).toBeInTheDocument();
   expect(screen.getByRole('img', { name: 'Preview of Kitia' })).toHaveAttribute('src', '/images/projects/kitia.webp');
   expect(screen.getByText('AI tools')).toBeInTheDocument();
+  expect(screen.getAllByText('TUI')).toHaveLength(2);
+  expect(screen.getByText('CLI')).toBeInTheDocument();
+  expect(screen.getByText('AI')).toBeInTheDocument();
   expect(screen.getByText('LIVE')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /Visit website/ })).toHaveAttribute('href', 'https://kitia.example');
   expect(screen.getByRole('link', { name: 'GitHub Kitia' })).toHaveAttribute('href', 'https://github.com/grasdouble/Kitia');
@@ -28,7 +31,7 @@ it('renders the English project description and website destination', () => {
 it('renders the French description and uses the repository when no website exists', () => {
   render(
     <ProjectCard
-      project={{ id: 'lufa', name: 'Lufa', description: { en: 'A project without a website.', fr: 'Un projet sans site web.' }, language: 'JavaScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa', placeholderImage: 'placeholder-coding.webp' }}
+      project={{ id: 'lufa', name: 'Lufa', description: { en: 'A project without a website.', fr: 'Un projet sans site web.' }, tags: ['JavaScript', 'Automation'], siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa', placeholderImage: 'placeholder-coding.webp' }}
       index={1}
       locale="fr"
       text={text}

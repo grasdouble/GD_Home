@@ -6,11 +6,11 @@ import styles from './Projects.module.css';
 
 export default function Projects({ repos, locale, text, query, onQueryChange, activeFilter, onFilterChange }) {
   const categories = useMemo(
-    () => [locale === 'fr' ? 'Tous' : 'All', ...new Set(repos.map((repo) => repo.language).filter(Boolean))],
+    () => [locale === 'fr' ? 'Tous' : 'All', ...new Set(repos.flatMap((repo) => repo.tags).filter(Boolean))],
     [repos, locale],
   );
   const filteredRepos = useMemo(
-    () => filterProjects(repos, { language: activeFilter === 'All' ? 'Tous' : activeFilter, query }),
+    () => filterProjects(repos, { tag: activeFilter === 'All' ? 'Tous' : activeFilter, query }),
     [repos, activeFilter, query],
   );
 
