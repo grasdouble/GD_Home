@@ -33,7 +33,7 @@ export default function ProjectCard({ project, index, locale, text }) {
         <span><span className={styles.statusDot} /> {project.siteUrl ? text.online : text.github}</span>
       </div>
       <h3 className={styles.title}>{project.name}</h3>
-      <p className={styles.description}>{project.description || text.orgProject}</p>
+      <p className={styles.description}>{project.description[locale]}</p>
       <div className={styles.footer}>
         <a href={project.siteUrl || project.repositoryUrl} target="_blank" rel="noreferrer">
           {project.siteUrl ? text.visit : text.view} <ArrowUpRight size={15} />

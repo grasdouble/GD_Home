@@ -4,15 +4,15 @@ import { expect, it } from 'vitest';
 import Projects from './Projects.jsx';
 
 const repos = [
-  { id: 'kitia', name: 'Kitia', description: 'AI tools', language: 'TypeScript', siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia' },
-  { id: 'lufa', name: 'Lufa', description: 'Design system', language: 'TypeScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa' },
-  { id: 'dashboard', name: 'Dashboard', description: 'Repository tools', language: 'JavaScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Dashboard' },
+  { id: 'kitia', name: 'Kitia', description: { en: 'AI tools', fr: 'Outils d’IA' }, language: 'TypeScript', siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia' },
+  { id: 'lufa', name: 'Lufa', description: { en: 'Design system', fr: 'Système de design' }, language: 'TypeScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa' },
+  { id: 'dashboard', name: 'Dashboard', description: { en: 'Repository tools', fr: 'Outils de dépôt' }, language: 'JavaScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Dashboard' },
 ];
 
 const text = {
   discover: 'Discover', visible: 'projects shown', filter: 'Filter by technology', search: 'Search projects',
   empty: 'No projects match your search.', web: 'WEB PROJECT', project: 'Project', online: 'LIVE',
-  github: 'ON GITHUB', orgProject: 'A Grasdouble project.', visit: 'Visit website', view: 'View project',
+  github: 'ON GITHUB', visit: 'Visit website', view: 'View project',
 };
 
 function ProjectsHarness() {

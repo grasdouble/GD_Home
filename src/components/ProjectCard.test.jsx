@@ -4,13 +4,13 @@ import ProjectCard from './ProjectCard.jsx';
 
 const text = {
   web: 'WEB PROJECT', project: 'Project', online: 'LIVE', github: 'ON GITHUB',
-  orgProject: 'A Grasdouble project.', visit: 'Visit website', view: 'View project',
+  visit: 'Visit website', view: 'View project',
 };
 
-it('renders a live project with its preview and website destination', () => {
+it('renders the English project description and website destination', () => {
   render(
     <ProjectCard
-      project={{ id: 'kitia', name: 'Kitia', description: 'AI tools', language: 'TypeScript', siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia', placeholderImage: 'placeholder-analytics.webp' }}
+      project={{ id: 'kitia', name: 'Kitia', description: { en: 'AI tools', fr: 'Outils d’IA' }, language: 'TypeScript', siteUrl: 'https://kitia.example', repositoryUrl: 'https://github.com/grasdouble/Kitia', placeholderImage: 'placeholder-analytics.webp' }}
       index={0}
       locale="en"
       text={text}
@@ -19,15 +19,16 @@ it('renders a live project with its preview and website destination', () => {
 
   expect(screen.getByRole('heading', { name: 'Kitia' })).toBeInTheDocument();
   expect(screen.getByRole('img', { name: 'Preview of Kitia' })).toHaveAttribute('src', '/images/projects/kitia.webp');
+  expect(screen.getByText('AI tools')).toBeInTheDocument();
   expect(screen.getByText('LIVE')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /Visit website/ })).toHaveAttribute('href', 'https://kitia.example');
   expect(screen.getByRole('link', { name: 'GitHub Kitia' })).toHaveAttribute('href', 'https://github.com/grasdouble/Kitia');
 });
 
-it('uses the repository as the main destination when the project has no website', () => {
+it('renders the French description and uses the repository when no website exists', () => {
   render(
     <ProjectCard
-      project={{ id: 'lufa', name: 'Lufa', description: '', language: 'JavaScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa', placeholderImage: 'placeholder-coding.webp' }}
+      project={{ id: 'lufa', name: 'Lufa', description: { en: 'A project without a website.', fr: 'Un projet sans site web.' }, language: 'JavaScript', siteUrl: '', repositoryUrl: 'https://github.com/grasdouble/Lufa', placeholderImage: 'placeholder-coding.webp' }}
       index={1}
       locale="fr"
       text={text}
@@ -35,7 +36,7 @@ it('uses the repository as the main destination when the project has no website'
   );
 
   expect(screen.getByText('ON GITHUB')).toBeInTheDocument();
-  expect(screen.getByText('A Grasdouble project.')).toBeInTheDocument();
+  expect(screen.getByText('Un projet sans site web.')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /View project/ })).toHaveAttribute('href', 'https://github.com/grasdouble/Lufa');
   expect(screen.getByRole('img', { name: 'Aperçu de Lufa' })).toBeInTheDocument();
   const preview = screen.getByRole('img', { name: 'Aperçu de Lufa' });
