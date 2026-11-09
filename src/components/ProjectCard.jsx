@@ -37,11 +37,11 @@ export default function ProjectCard({ project, index, locale, text }) {
       <h3 className={styles.title}>{project.name}</h3>
       <p className={styles.description}>{project.description[locale]}</p>
       <div className={styles.footer}>
-        <a href={project.siteUrl || project.repositoryUrl} target="_blank" rel="noreferrer">
+        <a href={project.siteUrl || project.repositoryUrl} target="_blank" rel="noreferrer" data-analytics-link={`${project.id}_${project.siteUrl ? 'website' : 'repository'}`}>
           {project.siteUrl ? text.visit : text.view} <ArrowUpRight size={15} />
         </a>
         <span className={styles.repoActions}>
-          <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`GitHub ${project.name}`}><Github size={16} /></a>
+          <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`GitHub ${project.name}`} data-analytics-link={`${project.id}_repository`}><Github size={16} /></a>
         </span>
       </div>
     </article>

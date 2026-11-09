@@ -18,7 +18,7 @@ export default function Header({ locale, onLocaleChange, organizationLabel, lang
             </button>
           ))}
         </div>
-        <a className={styles.orgLink} href="https://github.com/grasdouble" target="_blank" rel="noreferrer">
+        <a className={styles.orgLink} href="https://github.com/grasdouble" target="_blank" rel="noreferrer" data-analytics-link="organization_github">
           <Github size={16} /> {organizationLabel} <ArrowUpRight size={14} />
         </a>
       </div>
