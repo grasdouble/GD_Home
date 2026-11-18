@@ -1,5 +1,15 @@
 [
   {
+    "id": "mapositiongps",
+    "name": "Ma Position GPS",
+    "description": {
+      "en": "Find, share, or open your GPS coordinates in Google Maps, Waze, or Apple Maps.",
+      "fr": "Trouvez, partagez ou ouvrez vos coordonnées GPS dans Google Maps, Waze ou Plans."
+    },
+    "tags": ["GPS", "Geolocation"],
+    "siteUrl": "https://www.mapositiongps.fr/"
+  },
+  {
     "id": "Kitia",
     "placeholderImage": "placeholder-analytics.webp",
     "name": "Kitia",

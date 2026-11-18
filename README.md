@@ -29,8 +29,8 @@ The site sends the default `page_view` event and a `link_click` event for clicke
 
 ## Data and site links
 
-The displayed projects are maintained in `src/projects.json`; the application does not query GitHub at runtime. Each entry contains a string `id` (the project/repository name), a display `name`, optional `description` and `language`, a `siteUrl`, and a `repositoryUrl`. The array order is the display order. Search and language filtering are derived from this file.
+The displayed projects are maintained in `src/projects.json`; the application does not query GitHub at runtime. Each entry contains a string `id`, a display `name`, bilingual `description` text, and `tags`. The array order is the display order. Search uses project names, descriptions, and tags; filters use tags.
 
 Add each project's preview image as `public/images/projects/<id>.webp`, using the string `id` from the JSON. For example, `Lufa-Design-System` uses `public/images/projects/Lufa-Design-System.webp`. Cards show their styled fallback when an image is not present.
 
-To add a project, add its metadata to `src/projects.json` and copy its WebP preview into the image directory. Leave `siteUrl` empty when the project has no published site; the card then links directly to `repositoryUrl`.
+Provide at least one public link. For a private repository with a public site, set `siteUrl` and omit `repositoryUrl`; the card links only to the website. For a project without a published site, omit `siteUrl` or leave it empty; the card links to `repositoryUrl` instead.

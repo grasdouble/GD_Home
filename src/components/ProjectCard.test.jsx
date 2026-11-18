@@ -28,6 +28,21 @@ it('renders a live project with its tags and website destination', () => {
   expect(screen.getByRole('link', { name: 'GitHub Kitia' })).toHaveAttribute('href', 'https://github.com/grasdouble/Kitia');
 });
 
+it('offers only the public website when no repository URL is configured', () => {
+  render(
+    <ProjectCard
+      project={{ id: 'mapositiongps', name: 'Ma Position GPS', description: { en: 'Share your GPS coordinates.' }, tags: ['GPS'], siteUrl: 'https://www.mapositiongps.fr/' }}
+      index={0}
+      locale="en"
+      text={text}
+    />,
+  );
+
+  expect(screen.getByText('LIVE')).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Visit website/ })).toHaveAttribute('href', 'https://www.mapositiongps.fr/');
+  expect(screen.queryByLabelText('GitHub Ma Position GPS')).not.toBeInTheDocument();
+});
+
 it('renders the French description and uses the repository when no website exists', () => {
   render(
     <ProjectCard
