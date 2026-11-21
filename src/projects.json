@@ -1,5 +1,15 @@
 [
   {
+    "id": "trashoscope",
+    "name": "Trashoscope",
+    "description": {
+      "en": "A daily satirical horoscope with unsolicited advice for all twelve zodiac signs.",
+      "fr": "Un horoscope satirique quotidien avec des conseils non sollicités pour les douze signes du zodiaque."
+    },
+    "tags": ["Astrology", "Satire"],
+    "siteUrl": "https://trashoscope.com/"
+  },
+  {
     "id": "mapositiongps",
     "name": "Ma Position GPS",
     "description": {
