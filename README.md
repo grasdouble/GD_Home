@@ -31,6 +31,8 @@ The site sends the default `page_view` event and a `link_click` event for clicke
 
 The displayed projects are maintained in `src/projects.json`; the application does not query GitHub at runtime. Each entry contains a string `id`, a display `name`, bilingual `description` text, and `tags`. The array order is the display order. Search uses project names, descriptions, and tags; filters use tags.
 
+Set the optional `"hidden": true` field to keep a project in the file without showing it in the gallery, search results, project count, or tag filters. Omit the field or set it to `false` to show the project. Hidden projects are still included in the site's client-side data.
+
 Add each project's preview image as `public/images/projects/<id>.webp`, using the string `id` from the JSON. For example, `Lufa-Design-System` uses `public/images/projects/Lufa-Design-System.webp`. Cards show their styled fallback when an image is not present.
 
 Provide at least one public link. For a private repository with a public site, set `siteUrl` and omit `repositoryUrl`; the card links only to the website. For a project without a published site, omit `siteUrl` or leave it empty; the card links to `repositoryUrl` instead.

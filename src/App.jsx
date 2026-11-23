@@ -6,6 +6,8 @@ import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
 import translations from './translations.jsx';
 
+const visibleProjects = projects.filter((project) => project.hidden !== true);
+
 function getInitialLocale() {
   try {
     const savedLocale = localStorage.getItem('grasdouble-locale');
@@ -45,7 +47,7 @@ export default function App() {
         illustrationLabel={locale === 'fr' ? 'Panda GrasDouble devant un ordinateur' : 'GrasDouble panda at a computer'}
       />
       <Projects
-        repos={projects}
+        repos={visibleProjects}
         locale={locale}
         text={text}
         query={query}
