@@ -21,6 +21,17 @@
     "siteUrl": "https://www.mapositiongps.fr/"
   },
   {
+    "id": "lexigrid",
+    "placeholderImage": "placeholder-experiment.webp",
+    "name": "LexiGrid",
+    "description": {
+      "en": "An online word search game: find hidden words in a grid of letters.",
+      "fr": "Un jeu de mots mêlés en ligne : retrouvez les mots cachés dans une grille de lettres."
+    },
+    "tags": ["Word Games", "Puzzles"],
+    "siteUrl": "https://lexigrid.grasdouble.fr/"
+  },
+  {
     "id": "Kitia",
     "placeholderImage": "placeholder-analytics.webp",
     "name": "Kitia",
@@ -31,6 +42,30 @@
     "tags": ["TUI", "CLI", "AI"],
     "siteUrl": "https://kitia.grasdouble.fr",
     "repositoryUrl": "https://github.com/grasdouble/Kitia"
+  },
+    {
+    "id": "AI-Kit",
+    "placeholderImage": "placeholder-experiment.webp",
+    "name": "AI-Kit",
+    "description": {
+      "en": "A collection of resources and guidance for authoring reusable AI agents, skills, and instructions.",
+      "fr": "Collection de ressources et de guides pour créer des agents, skills et instructions réutilisables pour l’IA."
+    },
+    "tags": ["AI"],
+    "siteUrl": "",
+    "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
+  },
+  {
+    "id": "Lufa-Design-System",
+    "placeholderImage": "placeholder-design.webp",
+    "name": "Lufa Design System",
+    "description": {
+      "en": "Lufa design system with an online Storybook.",
+      "fr": "Système de design Lufa avec Storybook en ligne."
+    },
+    "tags": ["TypeScript", "Design System", "Storybook"],
+    "siteUrl": "https://lufa-design.sebastien-lemouillour.fr",
+    "repositoryUrl": "https://github.com/grasdouble/Lufa-Design-System"
   },
   {
     "id": "Lufa-CICD",
@@ -56,18 +91,7 @@
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Core"
   },
-  {
-    "id": "Lufa-Design-System",
-    "placeholderImage": "placeholder-design.webp",
-    "name": "Lufa Design System",
-    "description": {
-      "en": "Lufa design system with an online Storybook.",
-      "fr": "Système de design Lufa avec Storybook en ligne."
-    },
-    "tags": ["TypeScript", "Design System", "Storybook"],
-    "siteUrl": "https://lufa-design.sebastien-lemouillour.fr",
-    "repositoryUrl": "https://github.com/grasdouble/Lufa-Design-System"
-  },
+
   {
     "id": "sebastien-lemouillour.fr",
     "placeholderImage": "placeholder-launch.webp",
@@ -79,17 +103,5 @@
     "tags": ["TypeScript", "React", "single-spa"],
     "siteUrl": "https://sebastien-lemouillour.fr",
     "repositoryUrl": "https://github.com/grasdouble/sebastien-lemouillour.fr"
-  },
-  {
-    "id": "AI-Kit",
-    "placeholderImage": "placeholder-experiment.webp",
-    "name": "AI-Kit",
-    "description": {
-      "en": "A collection of resources and guidance for authoring reusable AI agents, skills, and instructions.",
-      "fr": "Collection de ressources et de guides pour créer des agents, skills et instructions réutilisables pour l’IA."
-    },
-    "tags": ["AI"],
-    "siteUrl": "",
-    "repositoryUrl": "https://github.com/grasdouble/AI-Kit"
   }
 ]
