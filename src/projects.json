@@ -91,7 +91,17 @@
     "siteUrl": "",
     "repositoryUrl": "https://github.com/grasdouble/Lufa-Core"
   },
-
+  {
+    "id": "handbook",
+    "placeholderImage": "placeholder-engineering.webp",
+    "name": "Handbook",
+    "description": {
+      "en": "Practical, in-depth guides on AI, software architecture, and developer tools.",
+      "fr": "Des guides pratiques et approfondis sur l’IA, l’architecture logicielle et les outils de développement."
+    },
+    "tags": ["AI", "Software Architecture", "Developer Tools"],
+    "siteUrl": "https://handbook.grasdouble.fr/"
+  },
   {
     "id": "sebastien-lemouillour.fr",
     "placeholderImage": "placeholder-launch.webp",
